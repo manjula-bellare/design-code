@@ -1,2 +1,2 @@
 # manjulabellare.github.io
-Always effortful discipline.
+Spring framework tutorials.
