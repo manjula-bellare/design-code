@@ -5,33 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spring Framework tutorial</title>
     <link rel="stylesheet" href="./css/mainStyles.css">
+
 </head>
 <body>
-<nav>
-    <ul>
-        <li class="submenu">
-            <a href="#javaCode">Java Code</a>
-            <ul class="submenu-content">
-                <li><a href="https://github.com/manjula-bellare/design-code.git">Restful API</a></li>
-                <li><a href="#ooa">Apache Kafka Streams</a></li>
-            </ul>
-        </li>
-        <li class="submenu">
-            <a href="#design">Design</a>
-            <ul class="submenu-content">
-                <li><a href="#ooad">OOAD</a></li>
-                <li><a href="#ooa">Design Patterns</a></li>
-            </ul>
-        </li>
 
-    </ul>
-</nav>
+<div class="sidenav">
+    <a href="#" onclick="showContent('content1')">Java Code</a>
+    <a href="#" onclick="showContent('content2')">Design</a>
+</div>
 
-    <article class="center">
+<div class="main">
+    <article>
         <h1>Welcome!</h1>
         <p>It is great to learn and share applications using Spring Boot framework for building Java-based applications with minimal configuration. It provides default configurations, built-in functionalities and simplifies the development process.</p>
-
     </article>
+    <div id="content1" class="content">
+        <span class="closebtn" onclick="closeContent('content1')">×</span>
+        <h3>Java Code</h3>
+        <ol>
+           <li> <p>SpringBoot Restful webservice to connect and persist data in MySQL.</p>
+            <p><a href="https://github.com/manjula-bellare/rest-spring-app.git">https://github.com/manjula-bellare/rest-spring-app.git</a></p>
+            </li>
+        </ol>
+    </div>
+    <div id="content2" class="content">
+        <span class="closebtn" onclick="closeContent('content2')">×</span>
+        <h3>Design</h3>
+        <p>arriving soon.
+        </p>
+    </div>
+</div>
+
+<script>
+    function showContent(id) {
+        var contents = document.getElementsByClassName('content');
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = 'none';
+        }
+        document.getElementById(id).style.display = 'block';
+    }
+
+    function closeContent(id) {
+        document.getElementById(id).style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
